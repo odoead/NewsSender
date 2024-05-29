@@ -15,7 +15,7 @@ export class NewsServiceService {
 
   constructor(private http: HttpClient) {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl(this.signalEndpoint, {
+      .withUrl(this.newsUrl, {
         skipNegotiation: true,
         transport: signalR.HttpTransportType.WebSockets,
       })
