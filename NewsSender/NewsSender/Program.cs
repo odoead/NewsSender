@@ -31,8 +31,8 @@ app.UseRouting();
 app.UseCors("CorsPolicy");
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllers();
     endpoints.MapHub<NewsHub>("/newshub");
+    endpoints.MapControllers();
 });
 app.UseHttpsRedirection();
 app.UseAuthorization();

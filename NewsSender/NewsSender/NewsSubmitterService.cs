@@ -21,7 +21,7 @@ namespace NewsSender
             var random = new Random();
             while (!stoppingToken.IsCancellationRequested)
             {
-                await Task.Delay(TimeSpan.FromSeconds(30), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(50), stoppingToken);
                 using (var scope = this.scopeFactory.CreateScope())
                 {
                     var context = scope.ServiceProvider.GetRequiredService<AppDBContext>();

@@ -1,0 +1,13 @@
+<div>
+    <h3>Categories</h3>
+    <form>
+    <ul>
+      <li *ngFor="let category of categories">
+        <label>
+          <input type="checkbox" [name]="category.name" (change)="onCategoryChange(category.name)">
+          <span>{{ category.name }}</span>
+        </label>
+      </li>
+    </ul>
+  </form>
+  </div>
